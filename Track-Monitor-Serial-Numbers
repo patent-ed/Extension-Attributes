@@ -3,4 +3,3 @@
 result=`system_profiler SPDisplaysDataType | grep -e "^\ \{8\}[A-Z]" -e "Display Serial Number" | sed 's/^[ \t]*//' | sed -e :a -e '$!N;s/\nDisplay Serial Number: / /;ta' -e 'P;D'`
 
 echo "<result>$result</result>"
-
